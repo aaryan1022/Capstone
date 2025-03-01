@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaria Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Malaria Transmission Simulation</h1>
+        
+        <div class="simulation-form">
+            <div class="form-group">
+                <label for="humanPopulation">Human Population:</label>
+                <input type="number" id="humanPopulation" min="100" max="50000" value="10000">
+            </div>
+            
+            <div class="form-group">
+                <label for="mosquitoPopulation">Mosquito Population:</label>
+                <input type="number" id="mosquitoPopulation" min="100" max="50000" value="10000">
+            </div>
+            
+            <div class="form-group">
+                <label for="numHouses">Number of Houses:</label>
+                <input type="number" id="numHouses" min="10" max="1000" value="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" min="15" max="40" value="25">
+            </div>
+            
+            <div class="form-group">
+                <label for="numDays">Simulation Days:</label>
+                <input type="number" id="numDays" min="10" max="1000" value="500">
+            </div>
+            
+            <button id="runSimulation">Run Simulation</button>
+        </div>
+        
+        <div class="simulation-status">
+            <div id="status">Ready to run simulation</div>
+            <div class="loader" id="loader"></div>
+        </div>
+        
+        <div class="results-container">
+            <h2>Simulation Results</h2>
+            <div class="graph-container">
+                <h3>Global Malaria Transmission Dynamics</h3>
+                <div id="globalGraph"></div>
+            </div>
+            
+            <div class="graph-container">
+                <h3>House-Level Infected Dynamics</h3>
+                <div id="houseGraph"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
