@@ -1,4 +1,4 @@
-For using the malaria simulation website, here are the instructions:  <br /><br />
+For using the malaria simulation website, here are the instructions:  <br />
 
 -> open the directory using terminal <br />
 -> run _npm install_ to get the required packages<br />
